@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org.example</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s2">// Get the ParkingLotManager instance</span>
+        <span class="s1">ParkingLotManager manager = ParkingLotManager.getInstance()</span><span class="s0">;</span>
+
+        <span class="s2">// Create vehicles using the VehicleFactory</span>
+        <span class="s1">Vehicle car = VehicleFactory.createVehicle(</span><span class="s3">&quot;car&quot;</span><span class="s0">, </span><span class="s3">&quot;ABC123&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Vehicle motorcycle = VehicleFactory.createVehicle(</span><span class="s3">&quot;motorcycle&quot;</span><span class="s0">, </span><span class="s3">&quot;XYZ789&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Vehicle truck = VehicleFactory.createVehicle(</span><span class="s3">&quot;truck&quot;</span><span class="s0">, </span><span class="s3">&quot;LMN456&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s2">// Park vehicles</span>
+        <span class="s1">manager.parkVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after parking a car: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+
+        <span class="s1">manager.parkVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after parking a motorcycle: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+
+        <span class="s1">manager.parkVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after parking a truck: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+
+        <span class="s2">// Leave vehicles</span>
+        <span class="s1">manager.leaveVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after a car leaves: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+
+        <span class="s1">manager.leaveVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after a motorcycle leaves: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+
+        <span class="s1">manager.leaveVehicle()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Available spots after a truck leaves: &quot; </span><span class="s1">+ manager.getAvailableSpots())</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
